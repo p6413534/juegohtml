@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Código Rítmico - Bolivia</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div class="fondo-bolivia"></div>
+
+  <div id="hud">
+    <div>SCORE: <span id="score">0000</span> | NIVEL: <span id="nivelActual">1</span> - <span id="nombreNivel">Saya Afro</span></div>
+    <div><span>TIEMPO: <strong id="tiempo">02:00</strong></span> COMBO: <span id="combo">0</span>x | VIDA: <div class="barra"><div id="vida"></div></div></div>
+  </div>
+
+  <main class="juego">
+    <canvas id="canvas" width="600" height="700" aria-label="Tablero de ritmo"></canvas>
+
+    <div id="controles-movil" class="controles-movil" aria-label="Controles táctiles">
+      <button class="btn-movil rojo" data-tecla="a" aria-label="Tocar carril A">A</button>
+      <button class="btn-movil amarillo" data-tecla="s" aria-label="Tocar carril S">S</button>
+      <button class="btn-movil verde" data-tecla="k" aria-label="Tocar carril K">K</button>
+      <button class="btn-movil azul" data-tecla="l" aria-label="Tocar carril L">L</button>
+    </div>
+  </main>
+
+  <section id="menu" class="menu" aria-labelledby="titulo-juego">
+    <div class="menu-cabecera">
+      <span class="marca">RITMO DE LOS ANDES</span>
+      <h1 id="titulo-juego">CÓDIGO RÍTMICO</h1>
+      <p class="sub">Selecciona un ritmo y entra al escenario</p>
+    </div>
+
+    <div id="mensajeCentro" class="mensaje-centro" aria-live="polite">PULSA JUGAR PARA EMPEZAR</div>
+
+    <div class="panel-menu">
+      <h2>Ritmos disponibles</h2>
+      <div class="niveles">
+        <button class="nivel-btn activo" data-nivel="0"><span>01</span><strong>Saya Afro</strong><small>100 BPM</small></button>
+        <button class="nivel-btn" data-nivel="1"><span>02</span><strong>Caporales</strong><small>120 BPM</small></button>
+        <button class="nivel-btn" data-nivel="2"><span>03</span><strong>Tinku</strong><small>135 BPM</small></button>
+        <button class="nivel-btn" data-nivel="3"><span>04</span><strong>Morenada</strong><small>150 BPM</small></button>
+      </div>
+    </div>
+
+    <div class="panel-musica">
+      <h2>Música del nivel</h2>
+      <p id="musicStatus" role="status" aria-live="polite">La música comenzará al pulsar Jugar.</p>
+    </div>
+
+    <div class="menu-pie">
+      <p><span>A S K L</span> Controles de teclado</p>
+      <button id="btnJugar" class="btn-jugar">Jugar</button>
+    </div>
+  </section>
+  <a href="instructivo.html" style="color: white; background: #ffcc00; color: black; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: bold;">VER INSTRUCTIVO</a>
+  <script src="js/Datos.js"></script>
+</body>
+</html>
